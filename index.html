@@ -3,189 +3,350 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile</title>
+
+<title>Portfolio | นายพีระพงศ์ สมวงค์</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI",sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#f4f4f4;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+
 }
 
 .container{
-    width:90%;
-    max-width:700px;
-    background:#fff;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-    text-align:center;
-}
 
-.profile{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:#e5e5e5;
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:45px;
-}
+width:100%;
+max-width:850px;
 
-h1{
-    margin-top:20px;
-    color:#333;
-}
+background:rgba(255,255,255,.65);
+backdrop-filter:blur(15px);
 
-.subtitle{
-    color:#777;
-    margin:10px 0 30px;
-}
+border-radius:25px;
+padding:45px;
 
-.info{
-    text-align:left;
-    line-height:2;
-    margin-bottom:30px;
-}
+box-shadow:0 20px 50px rgba(0,0,0,.12);
 
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
+animation:fade 1s;
 
-button{
-    border:none;
-    background:#222;
-    color:white;
-    padding:12px 22px;
-    border-radius:12px;
-    cursor:pointer;
-    font-size:15px;
-    transition:all .3s ease;
-}
-
-button:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,.18);
-}
-
-.card{
-    margin-top:30px;
-    background:#fafafa;
-    border-radius:15px;
-    padding:25px;
-    text-align:left;
-    display:none;
-    animation:fade .3s ease;
 }
 
 @keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(10px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.profile{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+.profile img{
+
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.profile h1{
+
+margin-top:18px;
+font-size:34px;
+color:#222;
+
+}
+
+.profile p{
+
+margin-top:8px;
+color:#666;
+font-size:17px;
+
+}
+
+.info{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin:35px 0;
+
+}
+
+.box{
+
+background:white;
+padding:18px;
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.box h3{
+
+color:#555;
+margin-bottom:8px;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+
+margin-top:15px;
+
+}
+
+button{
+
+padding:13px 24px;
+
+border:none;
+
+border-radius:12px;
+
+background:#3b82f6;
+color:white;
+
+font-size:15px;
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+box-shadow:0 15px 25px rgba(59,130,246,.35);
+
+}
+
+.content{
+
+margin-top:30px;
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+display:none;
+
+animation:show .35s;
+
+line-height:2;
+
+}
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.content h2{
+
+margin-bottom:12px;
+color:#333;
+
 }
 
 footer{
-    margin-top:35px;
-    color:#888;
-    font-size:14px;
+
+margin-top:35px;
+
+text-align:center;
+
+color:#888;
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="profile">👤</div>
+<div class="profile">
+
+<img src="profile.jpg" alt="Profile">
 
 <h1>นายพีระพงศ์ สมวงค์</h1>
-<p class="subtitle">นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์ ชั้นปีที่ 2</p>
+
+<p>นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์ ชั้นปีที่ 2</p>
+
+</div>
 
 <div class="info">
-<b>ชื่อ:</b> นายพีระพงศ์ สมวงค์<br>
-<b>สาขา:</b> วิศวกรรมคอมพิวเตอร์<br>
-<b>ชั้นปี:</b> ปี 2
+
+<div class="box">
+<h3>🎓 สาขา</h3>
+<p>วิศวกรรมคอมพิวเตอร์</p>
+</div>
+
+<div class="box">
+<h3>📚 ชั้นปี</h3>
+<p>ปี 2</p>
+</div>
+
+<div class="box">
+<h3>💻 ความสนใจ</h3>
+<p>Programming & Technology</p>
+</div>
+
 </div>
 
 <div class="buttons">
-<button onclick="showInfo('hobby')">งานอดิเรก</button>
-<button onclick="showInfo('like')">สิ่งที่ชอบ</button>
-<button onclick="showInfo('food')">อาหารที่ชอบ</button>
-<button onclick="showInfo('skill')">ความถนัด</button>
+
+<button onclick="showData('hobby')">🎮 งานอดิเรก</button>
+
+<button onclick="showData('like')">❤️ สิ่งที่ชอบ</button>
+
+<button onclick="showData('food')">🍜 อาหารที่ชอบ</button>
+
+<button onclick="showData('skill')">💻 ความถนัด</button>
+
 </div>
 
-<div id="card" class="card"></div>
+<div id="detail" class="content"></div>
 
 <footer>
-Minimal Profile © 2026
+
+Designed with HTML • CSS • JavaScript
+
 </footer>
 
 </div>
 
 <script>
 
-const data = {
+const data={
 
-hobby:
-`<h2>🎯 งานอดิเรก</h2>
-<p>
-• ฟังเพลง<br>
-• ดูหนัง<br>
-• เล่นเกม<br>
-• ศึกษาเทคโนโลยีใหม่ ๆ
-</p>`,
+hobby:`
+<h2>🎮 งานอดิเรก</h2>
 
-like:
-`<h2>❤️ สิ่งที่ชอบ</h2>
-<p>
-• คอมพิวเตอร์<br>
-• การเขียนโปรแกรม<br>
-• เทคโนโลยี AI<br>
-• การเรียนรู้สิ่งใหม่
-</p>`,
+<ul>
 
-food:
-`<h2>🍜 อาหารที่ชอบ</h2>
-<p>
-• กะเพรา<br>
-• หมูกระทะ<br>
-• ชาบู<br>
-• ซูชิ
-</p>`,
+<li>เล่นเกม</li>
 
-skill:
-`<h2>💻 ความถนัด</h2>
-<p>
-• HTML / CSS<br>
-• เขียนโปรแกรมเบื้องต้น<br>
-• แก้ไขปัญหาคอมพิวเตอร์<br>
-• ทำงานเป็นทีม
-</p>`
+<li>ฟังเพลง</li>
+
+<li>ดูหนัง</li>
+
+<li>ศึกษาเทคโนโลยีใหม่ ๆ</li>
+
+</ul>
+`,
+
+like:`
+
+<h2>❤️ สิ่งที่ชอบ</h2>
+
+<ul>
+
+<li>การเขียนโปรแกรม</li>
+
+<li>AI และเทคโนโลยี</li>
+
+<li>คอมพิวเตอร์</li>
+
+<li>การเรียนรู้สิ่งใหม่</li>
+
+</ul>
+`,
+
+food:`
+
+<h2>🍜 อาหารที่ชอบ</h2>
+
+<ul>
+
+<li>กะเพรา</li>
+
+<li>หมูกระทะ</li>
+
+<li>ชาบู</li>
+
+<li>ซูชิ</li>
+
+</ul>
+`,
+
+skill:`
+
+<h2>💻 ความถนัด</h2>
+
+<ul>
+
+<li>HTML / CSS</li>
+
+<li>JavaScript เบื้องต้น</li>
+
+<li>ซ่อมและประกอบคอมพิวเตอร์</li>
+
+<li>แก้ไขปัญหาโปรแกรมเบื้องต้น</li>
+
+</ul>
+`
+
 };
 
-function showInfo(type){
-    const card=document.getElementById("card");
-    card.style.display="block";
-    card.innerHTML=data[type];
+function showData(type){
+
+const box=document.getElementById("detail");
+
+box.style.display="block";
+
+box.innerHTML=data[type];
+
 }
 
 </script>
